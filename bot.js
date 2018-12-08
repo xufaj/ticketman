@@ -8,11 +8,11 @@ function clean(text) {
         return text;
 }
 
-const prefix = "$";
+const prefix = "-";
 const client.login(process.env.BOT_TOKEN);
 
 client.on("ready", () => {
-  console.log("Vulnix | Logged in! Server count: ${client.guilds.size}");
+  console.log("Royal Ticket | Logged in! Server count: ${client.guilds.size}");
   client.user.setGame(`Support Magic |${prefix}new`);
 });
 
@@ -22,11 +22,11 @@ client.on("message", (message) => {
 
   if (message.content.toLowerCase().startsWith(prefix + `help`)) {
     const embed = new Discord.RichEmbed()
-    .setTitle(`:mailbox_with_mail: Vulnix Help`)
+    .setTitle(`:mailbox_with_mail: Royal Ticket Help`)
     .setColor(0xCF40FA)
-    .setDescription(`Hello! I'm Vulnix, the Discord bot for super cool support ticket stuff and more! Here are my commands:`)
+    .setDescription(`Hello! I'm Royal Ticket, the Discord bot for super cool support ticket stuff and more! Here are my commands:`)
     .addField(`Tickets`, `[${prefix}new]() > Opens up a new ticket and tags the Support Team\n[${prefix}close]() > Closes a ticket that has been resolved or been opened by accident`)
-    .addField(`Other`, `[${prefix}help]() > Shows you this help menu your reading\n[${prefix}ping]() > Pings the bot to see how long it takes to react\n[${prefix}about]() > Tells you all about Vulnix`)
+    .addField(`Other`, `[${prefix}help]() > Shows you this help menu your reading\n[${prefix}ping]() > Pings the bot to see how long it takes to react\n[${prefix}about]() > Tells you all about Royal Ticket`)
     message.channel.send({ embed: embed });
   }
 
