@@ -9,8 +9,7 @@ function clean(text) {
 }
 
 const prefix = "-";
-const client.login(process.env.BOT_TOKEN);
-
+const token = client.login(process.env.BOT_TOKEN);
 client.on("ready", () => {
   console.log("Royal Ticket | Logged in! Server count: ${client.guilds.size}");
   client.user.setGame(`Support Magic |${prefix}new`);
